@@ -1,0 +1,20 @@
+body {background-color: powderblue;}
+#header {
+margin: 0;
+padding: 0;
+width: 100%;
+background: xxxx;
+margin-top: 50px;
+
+}
+
+#header #content {
+margin: 0px auto;
+width: 400px; /* or whatever */
+}
+
+
+label{
+    display : inline-block;
+    width:100px;
+}
