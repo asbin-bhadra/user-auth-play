@@ -1,11 +1,11 @@
 @import helper._
 
-@(userForm: Form[LoginForm],message:Option[String])(implicit messages: Messages)
+@(userForm: Form[model.LoginForm],message:Option[String])(implicit messages: Messages)
 
 @main("Login") {
 <h1>Login</h1>
 
-@form(action = routes.HomeController.login()) {
+@form(action = routes.UserController.login()) {
 <p><label>Username</label> <input type="text" name="username"></p>
 <p><label>Password</label> <input type="password" name="password"></p>
 <p><label><input type="submit" value="Login"></label></p>

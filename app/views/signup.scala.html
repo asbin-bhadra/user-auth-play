@@ -1,11 +1,11 @@
 @import helper._
 
-@(userForm: Form[RegisterForm],message:Option[String])(implicit messages: Messages)
+@(userForm: Form[model.RegisterForm],message:Option[String])(implicit messages: Messages)
 
 @main("User Registration") {
 <h1>User Registration</h1>
 
-@form(action = routes.HomeController.save()) {
+@form(action = routes.UserController.addUser()) {
 <p><label>Name :</label> <input type="text" name="name"></p>
 <p><label>Username</label> <input type="text" name="username"></p>
 <p><label>Password</label> <input type="password" name="password"></p>

@@ -4,16 +4,22 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index()
-GET     /dashboard                  controllers.HomeController.dashboard
-GET     /login                      controllers.HomeController.loginForm()
-+nocsrf
-POST    /login                      controllers.HomeController.login()
-GET     /logout                     controllers.HomeController.logout()
+GET     /                           controllers.UserController.index()
 
-GET     /create                 controllers.HomeController.create
+
+
+GET    /registration                controllers.UserController.create()
 +nocsrf
-POST    /create                 controllers.HomeController.save()
+POST    /registration                controllers.UserController.addUser()
+
+GET     /login                      controllers.UserController.loginForm()
++nocsrf
+POST    /login                      controllers.UserController.login()
+
++nocsrf
+GET     /dashboard                  controllers.UserController.dashboard
+
+GET     /logout                     controllers.UserController.logout()
 
 
 # Map static resources from the /public folder to the /assets URL path
